@@ -163,6 +163,11 @@ def main():
         page_icon="📈",
         layout="wide"
     )
+    
+    # 设置Matplotlib中文字体支持
+    import matplotlib as mpl
+    mpl.rcParams['font.sans-serif'] = ['SimHei']  # 使用黑体显示中文
+    mpl.rcParams['axes.unicode_minus'] = False    # 解决负号显示问题
 
     st.title("📈 时序模型参数估计器")
     st.markdown("---")
